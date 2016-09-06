@@ -523,6 +523,8 @@ pp.flowParsePrimaryType = function () {
       return this.flowIdentToTypeAnnotation(startPos, startLoc, node, this.parseIdentifier());
 
     case tt.braceL:
+      return this.flowParseObjectType(false, false);
+
     case tt.braceBarL:
       return this.flowParseObjectType(false, true);
 

@@ -415,7 +415,7 @@ export default class Tokenizer {
         }
 
       case 125:
-      ++this.state.pos; return this.finishToken(tt.braceR);
+        ++this.state.pos; return this.finishToken(tt.braceR);
 
       case 58:
         if (this.hasPlugin("functionBind") && this.input.charCodeAt(this.state.pos + 1) === 58) {
