@@ -407,7 +407,7 @@ export default class Tokenizer {
       case 93: ++this.state.pos; return this.finishToken(tt.bracketR);
 
       case 123:
-        if (this.hasPlugin("flow") && this.input.charCodeAt(this.state.pos + 1) == 124) {
+        if (this.hasPlugin("flow") && this.input.charCodeAt(this.state.pos + 1) === 124) {
           return this.finishOp(tt.braceBarL, 2);
         } else {
           ++this.state.pos;
